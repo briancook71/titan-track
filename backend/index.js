@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const db_config = require('./db_config');
 const Workouts = require('./models/workouts');
+const Programs = require('./models/programs');
+const Trainings = require('./models/trainings');
 const cors = require('cors');
 
 app.use(cors()); //Grant access to the frontend
