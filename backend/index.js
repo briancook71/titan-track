@@ -15,8 +15,16 @@ db_config.authenticate().then(() => {
     console.log('Database connected failed: ', err);
 });
 
-app.get('/tasks', function(req, res){
-    Task.findAll().then((result) => {
+app.get('/programs', function(req, res){
+    Programs.findAll().then((result) => {
+        res.status(200).send(result);
+    }).catch((err) => {
+        res.status(500).send(err);
+    });
+});
+
+app.get('/workouts', function(req, res){
+    Workouts.findAll().then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(500).send(err);
