@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { Iprogram } from '../interfaces/iprogram';
+import { ProgramsService } from '../services/programs-service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +9,18 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab1Page {
+  programs = signal<Iprogram[]>([]);
 
-  constructor() {}
+  constructor(private service: ProgramsService){
+    this.service.getPrograms().subscribe((result) => {
+      console.log(result);
+      this.programs.set(result);
+    });
+  }
 
 }
+
+
+
+
+ 

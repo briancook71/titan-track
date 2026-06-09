@@ -1,4 +1,10 @@
 
+<ion-title size="small">Titan Track Workout Movements</ion-title>
+
     <div *ngFor="let workout_item of workouts()"> 
+      
+      <div>{{workout_item.program_id}}</div>
       <div>{{workout_item.movement}}</div>
+      <div>{{workout_item.movement_type}}</div>
+      <br>
     </div>
