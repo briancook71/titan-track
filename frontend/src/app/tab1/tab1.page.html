@@ -1,17 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Programs
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+    
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Titan Track Programs</ion-title>
     </ion-toolbar>
   </ion-header>
+  <br>
 
     <div *ngFor="let program_item of programs()"> 
       <div>{{program_item.title}}</div>
