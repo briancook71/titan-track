@@ -3,6 +3,48 @@
 
 <br>
 
+<ion-list>
+  <ion-item>
+    <ion-input label="Program type" placeholder="Enter text"></ion-input>
+  </ion-item>
+  <br>
+
+<ion-item>
+    
+    
+    <ion-select label="Warm Up & Stretch" label-placement="stacked">
+      <ion-select-option value="walk">Walk</ion-select-option>
+      <ion-select-option value="bike">Bike</ion-select-option>
+      <ion-select-option value="row">Row</ion-select-option>
+    </ion-select>
+  
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Movement 1" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Movement 2" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Movement 3" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Movement 4" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Movement 5" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Cool Down & Hydrate" labelPlacement="floating" placeholder="Enter text"></ion-input>
+  </ion-item>
+</ion-list>
+
     <div *ngFor="let workout_item of workouts()"> 
       
       <div>{{workout_item.program_id}}</div>
